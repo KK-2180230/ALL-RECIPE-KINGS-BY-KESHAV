@@ -1,0 +1,3475 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6b35">
+
+<title>ALL RECIPE KINGS 👑 | Made by KESHAV</title>
+
+<style>
+:root{
+ --orange:#ff6b35;
+ --orange2:#ff9f1c;
+ --cream:#fff8ef;
+ --cream2:#fff1df;
+ --dark:#171411;
+ --dark2:#211b17;
+ --text:#28221e;
+ --muted:#756d66;
+ --white:#fff;
+ --green:#21a366;
+ --red:#e63946;
+ --gold:#ffc857;
+ --border:#eadfd4;
+ --shadow:0 15px 45px rgba(66,39,20,.12);
+ --radius:24px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+ font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.5;
+ transition:.3s;
+}
+
+body.dark{
+ --cream:#12100e;
+ --cream2:#1b1714;
+ --dark:#080706;
+ --dark2:#171310;
+ --text:#f8f2ec;
+ --muted:#b8aaa0;
+ --white:#211c18;
+ --border:#3b312b;
+ --shadow:0 15px 45px rgba(0,0,0,.3);
+}
+
+body.green{
+ --orange:#14804a;
+ --orange2:#64b85c;
+ --cream:#f2fff6;
+ --cream2:#e5f8e9;
+}
+
+body.purple{
+ --orange:#8b4dff;
+ --orange2:#d56aff;
+ --cream:#faf5ff;
+ --cream2:#f0e4ff;
+}
+
+button,input,select{font:inherit}
+
+button{cursor:pointer}
+
+a{text-decoration:none;color:inherit}
+
+/* ================= NAV ================= */
+
+.topbar{
+ position:sticky;
+ top:0;
+ z-index:1000;
+ background:rgba(23,20,17,.96);
+ color:white;
+ border-bottom:1px solid #ffffff18;
+ backdrop-filter:blur(15px);
+}
+
+.nav{
+ max-width:1400px;
+ margin:auto;
+ padding:13px 22px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:10px;
+ font-weight:900;
+ font-size:20px;
+ white-space:nowrap;
+}
+
+.brand-mark{
+ width:43px;
+ height:43px;
+ border-radius:14px;
+ background:linear-gradient(135deg,var(--orange),var(--gold));
+ display:grid;
+ place-items:center;
+ font-size:23px;
+}
+
+.brand span{color:#ffad32}
+
+.navlinks{
+ display:flex;
+ gap:5px;
+ align-items:center;
+}
+
+.navlinks button{
+ border:0;
+ background:transparent;
+ color:white;
+ padding:10px 13px;
+ border-radius:12px;
+}
+
+.navlinks button:hover{background:#ffffff14}
+
+.nav-action{
+ border:0;
+ background:var(--orange);
+ color:white;
+ padding:10px 16px;
+ border-radius:14px;
+ font-weight:800;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+ max-width:1400px;
+ margin:auto;
+ min-height:680px;
+ display:grid;
+ grid-template-columns:1.05fr .95fr;
+ align-items:center;
+ gap:30px;
+ padding:65px 30px;
+}
+
+.hero-copy .eyebrow{
+ display:inline-flex;
+ padding:8px 13px;
+ border-radius:100px;
+ background:#fff0dc;
+ color:var(--orange);
+ font-weight:900;
+ font-size:13px;
+ margin-bottom:18px;
+}
+
+.hero h1{
+ font-size:clamp(48px,7vw,92px);
+ line-height:.94;
+ letter-spacing:-4px;
+ max-width:800px;
+}
+
+.hero h1 span{
+ color:var(--orange);
+}
+
+.hero h2{
+ margin-top:22px;
+ font-size:clamp(22px,3vw,34px);
+}
+
+.hero p{
+ color:var(--muted);
+ max-width:650px;
+ margin-top:18px;
+ font-size:17px;
+}
+
+.hero-buttons{
+ display:flex;
+ flex-wrap:wrap;
+ gap:12px;
+ margin-top:28px;
+}
+
+.primary{
+ border:0;
+ background:var(--orange);
+ color:white;
+ padding:15px 22px;
+ border-radius:15px;
+ font-weight:900;
+ box-shadow:0 10px 25px #ff6b3535;
+}
+
+.secondary{
+ border:1px solid var(--border);
+ background:var(--white);
+ color:var(--text);
+ padding:15px 22px;
+ border-radius:15px;
+ font-weight:800;
+}
+
+.hero-note{
+ margin-top:18px;
+ font-size:13px;
+ color:var(--muted);
+}
+
+.hero-visual{
+ min-height:520px;
+ border-radius:40px;
+ background:
+ radial-gradient(circle at 20% 15%,#ffffffcc 0 7%,transparent 8%),
+ radial-gradient(circle at 80% 80%,#ffffff55 0 10%,transparent 11%),
+ linear-gradient(145deg,#ff8a3d,#d93420);
+ position:relative;
+ overflow:hidden;
+ display:grid;
+ place-items:center;
+ box-shadow:0 25px 70px #d44a2735;
+}
+
+.food-orbit{
+ width:390px;
+ height:390px;
+ border:2px solid #ffffff55;
+ border-radius:50%;
+ position:relative;
+}
+
+.food-center{
+ width:180px;
+ height:180px;
+ border-radius:50%;
+ background:#fff;
+ position:absolute;
+ inset:0;
+ margin:auto;
+ display:grid;
+ place-items:center;
+ font-size:90px;
+ box-shadow:0 20px 40px #0003;
+}
+
+.food{
+ position:absolute;
+ width:80px;
+ height:80px;
+ border-radius:25px;
+ background:#ffffffdd;
+ display:grid;
+ place-items:center;
+ font-size:43px;
+ box-shadow:0 12px 30px #0002;
+}
+
+.f1{top:-25px;left:30px}
+.f2{top:80px;right:-35px}
+.f3{bottom:5px;right:35px}
+.f4{bottom:0;left:25px}
+.f5{top:150px;left:-40px}
+
+.made-by{
+ position:absolute;
+ bottom:20px;
+ left:25px;
+ background:#0008;
+ color:white;
+ padding:9px 14px;
+ border-radius:100px;
+ font-weight:800;
+}
+
+/* ================= GENERAL ================= */
+
+.section{
+ max-width:1400px;
+ margin:auto;
+ padding:70px 25px;
+}
+
+.section-head{
+ display:flex;
+ align-items:end;
+ justify-content:space-between;
+ gap:20px;
+ margin-bottom:28px;
+}
+
+.kicker{
+ color:var(--orange);
+ text-transform:uppercase;
+ letter-spacing:2px;
+ font-size:12px;
+ font-weight:900;
+}
+
+.section h2{
+ font-size:clamp(30px,4vw,48px);
+ line-height:1;
+ margin-top:6px;
+}
+
+.section-sub{
+ color:var(--muted);
+ margin-top:10px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-panel{
+ background:var(--dark2);
+ color:white;
+ padding:25px;
+ border-radius:28px;
+ box-shadow:var(--shadow);
+}
+
+.search-line{
+ display:flex;
+ gap:10px;
+}
+
+.search-input{
+ flex:1;
+ border:0;
+ background:#ffffff12;
+ color:white;
+ padding:16px 18px;
+ border-radius:15px;
+ outline:0;
+}
+
+.search-input::placeholder{color:#ffffff88}
+
+.search-btn{
+ border:0;
+ background:var(--orange);
+ color:white;
+ padding:0 24px;
+ border-radius:15px;
+ font-weight:900;
+}
+
+.filters{
+ display:flex;
+ flex-wrap:wrap;
+ gap:9px;
+ margin-top:14px;
+}
+
+.filter{
+ border:1px solid #ffffff20;
+ background:#ffffff0c;
+ color:white;
+ padding:9px 13px;
+ border-radius:100px;
+}
+
+.filter.active{
+ background:var(--orange);
+ border-color:var(--orange);
+}
+
+.advanced{
+ margin-top:15px;
+ display:none;
+ grid-template-columns:repeat(4,1fr);
+ gap:10px;
+}
+
+.advanced.show{display:grid}
+
+.advanced select{
+ padding:12px;
+ border-radius:12px;
+ border:1px solid #ffffff20;
+ background:#ffffff10;
+ color:white;
+}
+
+.result-count{
+ margin-top:15px;
+ color:#ffffff99;
+ font-size:13px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.category-grid{
+ display:grid;
+ grid-template-columns:repeat(8,1fr);
+ gap:12px;
+}
+
+.category{
+ min-height:125px;
+ padding:17px 10px;
+ border:1px solid var(--border);
+ background:var(--white);
+ border-radius:20px;
+ text-align:center;
+ box-shadow:var(--shadow);
+ transition:.2s;
+}
+
+.category:hover{
+ transform:translateY(-5px);
+ border-color:var(--orange);
+}
+
+.category .icon{
+ font-size:42px;
+ margin-bottom:7px;
+}
+
+.category b{font-size:13px}
+
+/* ================= SUB CATEGORIES ================= */
+
+.subcategory-area{
+ margin-top:25px;
+ padding:22px;
+ background:var(--cream2);
+ border-radius:22px;
+}
+
+.sub-title{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ margin-bottom:13px;
+}
+
+.sub-title h3{font-size:20px}
+
+.sub-pills{
+ display:flex;
+ flex-wrap:wrap;
+ gap:9px;
+}
+
+.sub-pill{
+ border:1px solid var(--border);
+ background:var(--white);
+ padding:10px 14px;
+ border-radius:100px;
+ color:var(--text);
+}
+
+.sub-pill:hover,
+.sub-pill.active{
+ background:var(--orange);
+ color:white;
+ border-color:var(--orange);
+}
+
+/* ================= FEATURED ================= */
+
+.featured{
+ display:grid;
+ grid-template-columns:1.1fr .9fr;
+ gap:20px;
+}
+
+.feature-card{
+ border-radius:28px;
+ overflow:hidden;
+ min-height:330px;
+ position:relative;
+ color:white;
+ background:linear-gradient(135deg,#ed5c24,#8d1e11);
+ display:flex;
+ align-items:end;
+ padding:30px;
+ box-shadow:var(--shadow);
+}
+
+.feature-card.big{
+ background:
+ linear-gradient(0deg,#000b,transparent 70%),
+ linear-gradient(135deg,#ff9448,#bd2c16);
+}
+
+.feature-card.small{
+ background:
+ linear-gradient(0deg,#000b,transparent 70%),
+ linear-gradient(135deg,#6b55d9,#22135b);
+}
+
+.feature-emoji{
+ position:absolute;
+ right:35px;
+ top:25px;
+ font-size:130px;
+ filter:drop-shadow(0 15px 20px #0004);
+}
+
+.feature-content{position:relative;max-width:600px}
+
+.feature-content h3{
+ font-size:36px;
+ line-height:1;
+}
+
+.feature-content p{margin:10px 0;color:#ffffffcc}
+
+/* ================= RECIPE GRID ================= */
+
+.recipe-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:18px;
+}
+
+.recipe-card{
+ background:var(--white);
+ border:1px solid var(--border);
+ border-radius:22px;
+ overflow:hidden;
+ box-shadow:var(--shadow);
+ transition:.2s;
+ position:relative;
+}
+
+.recipe-card:hover{
+ transform:translateY(-5px);
+}
+
+.recipe-photo{
+ height:190px;
+ display:grid;
+ place-items:center;
+ font-size:85px;
+ background:
+ radial-gradient(circle at 25% 25%,#ffffff55,transparent 20%),
+ linear-gradient(135deg,var(--orange),var(--orange2));
+ position:relative;
+}
+
+.recipe-card:nth-child(3n) .recipe-photo{
+ background:linear-gradient(135deg,#6c63ff,#a85cff);
+}
+
+.recipe-card:nth-child(4n) .recipe-photo{
+ background:linear-gradient(135deg,#16a36b,#7ac943);
+}
+
+.favorite{
+ position:absolute;
+ right:12px;
+ top:12px;
+ z-index:3;
+ width:40px;
+ height:40px;
+ border:0;
+ border-radius:50%;
+ background:#fff;
+ font-size:19px;
+ box-shadow:0 4px 15px #0002;
+}
+
+.favorite.saved{color:#e63946}
+
+.recipe-body{padding:17px}
+
+.recipe-title{
+ display:flex;
+ justify-content:space-between;
+ gap:8px;
+}
+
+.recipe-title h3{
+ font-size:18px;
+ line-height:1.15;
+}
+
+.rating{
+ color:#e59a00;
+ font-size:13px;
+ white-space:nowrap;
+}
+
+.meta{
+ display:flex;
+ flex-wrap:wrap;
+ gap:7px;
+ margin:11px 0;
+}
+
+.meta span{
+ font-size:11px;
+ padding:5px 8px;
+ border-radius:8px;
+ background:var(--cream2);
+ color:var(--muted);
+}
+
+.tags{
+ display:flex;
+ gap:6px;
+ flex-wrap:wrap;
+}
+
+.tag{
+ font-size:10px;
+ padding:5px 8px;
+ border-radius:100px;
+ background:#e6f8ed;
+ color:#08783d;
+ font-weight:800;
+}
+
+.tag.nonveg{
+ background:#ffe7e8;
+ color:#bd1d29;
+}
+
+.card-actions{
+ display:grid;
+ grid-template-columns:1fr 45px;
+ gap:7px;
+ margin-top:13px;
+}
+
+.view{
+ border:0;
+ background:var(--orange);
+ color:white;
+ border-radius:11px;
+ font-weight:900;
+ padding:11px;
+}
+
+.add{
+ border:1px solid var(--border);
+ background:transparent;
+ color:var(--text);
+ border-radius:11px;
+}
+
+/* ================= INDIA ================= */
+
+.india-section{
+ background:var(--dark);
+ color:white;
+ max-width:none;
+}
+
+.india-inner{
+ max-width:1400px;
+ margin:auto;
+ padding:70px 25px;
+}
+
+.india-layout{
+ display:grid;
+ grid-template-columns:.8fr 1.2fr;
+ gap:35px;
+ align-items:center;
+}
+
+.india-map{
+ width:min(440px,100%);
+ aspect-ratio:.75;
+ margin:auto;
+ position:relative;
+ background:linear-gradient(145deg,#ff9933 0 33%,#fff 33% 66%,#138808 66%);
+ clip-path:polygon(
+ 48% 0,59% 6%,62% 13%,74% 18%,69% 27%,
+ 83% 34%,77% 42%,89% 48%,77% 56%,72% 66%,
+ 64% 72%,61% 83%,55% 96%,49% 100%,43% 91%,
+ 38% 79%,31% 70%,27% 60%,19% 52%,25% 43%,
+ 17% 34%,29% 27%,26% 18%,38% 12%
+ );
+ filter:drop-shadow(0 25px 30px #0008);
+}
+
+.state{
+ position:absolute;
+ transform:translate(-50%,-50%);
+ background:#16120fcc;
+ border:1px solid #ffffff33;
+ color:white;
+ padding:6px 8px;
+ border-radius:9px;
+ font-size:10px;
+ font-weight:900;
+ cursor:pointer;
+ backdrop-filter:blur(8px);
+}
+
+.state:hover{
+ background:var(--orange);
+ transform:translate(-50%,-50%) scale(1.15);
+}
+
+.s1{left:36%;top:17%}
+.s2{left:57%;top:26%}
+.s3{left:17%;top:28%}
+.s4{left:51%;top:35%}
+.s5{left:68%;top:39%}
+.s6{left:31%;top:45%}
+.s7{left:49%;top:48%}
+.s8{left:23%;top:58%}
+.s9{left:66%;top:55%}
+.s10{left:47%;top:64%}
+.s11{left:39%;top:76%}
+.s12{left:53%;top:76%}
+.s13{left:42%;top:88%}
+.s14{left:53%;top:91%}
+
+.state-info{
+ padding:30px;
+ background:#ffffff0c;
+ border:1px solid #ffffff15;
+ border-radius:25px;
+}
+
+.state-info h3{
+ font-size:32px;
+ color:#ffb24a;
+}
+
+.state-food{
+ font-size:55px;
+ margin:20px 0;
+}
+
+/* ================= KITCHEN ================= */
+
+.kitchen{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:18px;
+}
+
+.kitchen-card{
+ background:var(--white);
+ border:1px solid var(--border);
+ padding:25px;
+ border-radius:23px;
+ box-shadow:var(--shadow);
+}
+
+.kitchen-card .big-icon{font-size:45px}
+
+.kitchen-card h3{margin:10px 0 5px}
+
+.kitchen-card p{
+ color:var(--muted);
+ font-size:14px;
+}
+
+.kitchen-card button{
+ margin-top:15px;
+ border:0;
+ background:var(--orange);
+ color:white;
+ padding:10px 14px;
+ border-radius:11px;
+ font-weight:800;
+}
+
+/* ================= SETTINGS ================= */
+
+.settings{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:18px;
+}
+
+.setting{
+ background:var(--white);
+ border:1px solid var(--border);
+ border-radius:20px;
+ padding:20px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+}
+
+.setting h3{font-size:16px}
+
+.setting p{
+ color:var(--muted);
+ font-size:12px;
+}
+
+.setting select{
+ border:1px solid var(--border);
+ padding:9px;
+ border-radius:10px;
+ background:var(--cream);
+ color:var(--text);
+}
+
+.setting input{accent-color:var(--orange)}
+
+/* ================= MODAL ================= */
+
+.modal{
+ position:fixed;
+ inset:0;
+ z-index:3000;
+ background:#000b;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ padding:20px;
+}
+
+.modal.open{display:flex}
+
+.modal-box{
+ width:min(900px,100%);
+ max-height:92vh;
+ overflow:auto;
+ background:var(--white);
+ color:var(--text);
+ border-radius:28px;
+ box-shadow:0 30px 90px #0008;
+}
+
+.modal-top{
+ padding:25px;
+ background:linear-gradient(135deg,var(--orange),var(--orange2));
+ color:white;
+ position:relative;
+}
+
+.modal-emoji{
+ font-size:75px;
+}
+
+.modal-top h2{
+ font-size:38px;
+ line-height:1;
+}
+
+.close{
+ position:absolute;
+ right:18px;
+ top:18px;
+ width:40px;
+ height:40px;
+ border:0;
+ border-radius:50%;
+ background:#0005;
+ color:white;
+ font-size:23px;
+}
+
+.modal-body{padding:25px}
+
+.modal-meta{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+ margin-bottom:22px;
+}
+
+.modal-meta span{
+ background:var(--cream2);
+ padding:9px 12px;
+ border-radius:10px;
+ font-size:13px;
+}
+
+.recipe-columns{
+ display:grid;
+ grid-template-columns:.8fr 1.2fr;
+ gap:30px;
+}
+
+.ingredients{
+ list-style:none;
+}
+
+.ingredients li{
+ padding:10px 0;
+ border-bottom:1px solid var(--border);
+}
+
+.ingredients li input{
+ margin-right:8px;
+ accent-color:var(--orange);
+}
+
+.steps{
+ counter-reset:steps;
+ list-style:none;
+}
+
+.steps li{
+ counter-increment:steps;
+ padding:13px 0 13px 48px;
+ position:relative;
+ border-bottom:1px solid var(--border);
+}
+
+.steps li:before{
+ content:counter(steps);
+ position:absolute;
+ left:0;
+ top:10px;
+ width:34px;
+ height:34px;
+ border-radius:50%;
+ background:var(--orange);
+ color:white;
+ display:grid;
+ place-items:center;
+ font-weight:900;
+}
+
+.modal-buttons{
+ display:flex;
+ flex-wrap:wrap;
+ gap:10px;
+ margin-top:25px;
+}
+
+.modal-buttons button{
+ border:0;
+ padding:12px 16px;
+ border-radius:12px;
+ font-weight:900;
+}
+
+.cook-btn{background:var(--orange);color:white}
+.shop-btn{background:#e8f8ee;color:#08783d}
+.print-btn{background:var(--cream2);color:var(--text)}
+
+/* ================= COOK MODE ================= */
+
+.cook-mode{
+ position:fixed;
+ inset:0;
+ z-index:5000;
+ background:var(--dark);
+ color:white;
+ display:none;
+ flex-direction:column;
+}
+
+.cook-mode.open{display:flex}
+
+.cook-header{
+ padding:18px 25px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ border-bottom:1px solid #ffffff18;
+}
+
+.cook-content{
+ flex:1;
+ display:grid;
+ place-items:center;
+ padding:30px;
+ text-align:center;
+}
+
+.cook-content .cook-emoji{
+ font-size:100px;
+}
+
+.cook-content h2{
+ font-size:clamp(32px,6vw,65px);
+ margin:15px 0;
+}
+
+.cook-content p{
+ max-width:750px;
+ color:#ffffffaa;
+ font-size:20px;
+}
+
+.progress{
+ width:min(700px,90%);
+ height:8px;
+ background:#ffffff15;
+ border-radius:100px;
+ overflow:hidden;
+ margin:25px auto;
+}
+
+.progress span{
+ display:block;
+ height:100%;
+ background:var(--orange);
+ width:0;
+ transition:.3s;
+}
+
+.cook-controls{
+ display:flex;
+ justify-content:center;
+ gap:10px;
+ padding:20px;
+}
+
+.cook-controls button{
+ border:0;
+ padding:13px 22px;
+ border-radius:12px;
+ font-weight:900;
+}
+
+/* ================= SHOPPING ================= */
+
+.shop-list{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+.shop-item{
+ background:var(--white);
+ border:1px solid var(--border);
+ border-radius:15px;
+ padding:15px;
+ display:flex;
+ gap:10px;
+ align-items:center;
+}
+
+.shop-item.done{
+ opacity:.5;
+ text-decoration:line-through;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+ background:#0c0a08;
+ color:white;
+ padding:55px 25px 25px;
+ text-align:center;
+}
+
+.footer-brand{
+ font-size:30px;
+ font-weight:900;
+}
+
+.footer-brand span{color:#ff9f1c}
+
+.footer-made{
+ display:inline-block;
+ margin-top:15px;
+ padding:10px 18px;
+ border:1px solid #ffffff18;
+ border-radius:100px;
+ color:#ffb44d;
+ font-weight:900;
+}
+
+.footer-links{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:18px;
+ margin:25px 0;
+ color:#ffffffaa;
+ font-size:13px;
+}
+
+.copyright{
+ color:#ffffff55;
+ font-size:12px;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+ position:fixed;
+ bottom:25px;
+ left:50%;
+ transform:translate(-50%,120px);
+ background:#171411;
+ color:white;
+ padding:13px 18px;
+ border-radius:13px;
+ z-index:7000;
+ box-shadow:0 10px 35px #0004;
+ transition:.3s;
+ font-weight:700;
+}
+
+.toast.show{transform:translate(-50%,0)}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1100px){
+ .category-grid{grid-template-columns:repeat(4,1fr)}
+ .recipe-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr}
+ .hero-visual{min-height:420px}
+ .featured{grid-template-columns:1fr}
+ .india-layout{grid-template-columns:1fr}
+ .recipe-columns{grid-template-columns:1fr}
+ .settings{grid-template-columns:1fr}
+ .kitchen{grid-template-columns:1fr}
+ .shop-list{grid-template-columns:1fr}
+ .advanced.show{grid-template-columns:1fr 1fr}
+ .navlinks{display:none}
+}
+
+@media(max-width:620px){
+ .hero{padding:45px 18px}
+ .hero h1{letter-spacing:-2px}
+ .section{padding:50px 17px}
+ .category-grid{grid-template-columns:repeat(2,1fr)}
+ .recipe-grid{grid-template-columns:1fr}
+ .search-line{flex-direction:column}
+ .search-btn{padding:14px}
+ .advanced.show{grid-template-columns:1fr}
+ .hero-visual{min-height:360px}
+ .food-orbit{transform:scale(.72)}
+ .section-head{display:block}
+ .section-head .secondary{margin-top:15px}
+ .setting{align-items:flex-start;flex-direction:column}
+ .india-map{width:330px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<div class="topbar">
+<nav class="nav">
+
+ <div class="brand">
+  <div class="brand-mark">👑</div>
+  <div>ALL <span>RECIPE KINGS</span></div>
+ </div>
+
+ <div class="navlinks">
+  <button onclick="go('home')">Home</button>
+  <button onclick="go('explore')">Explore</button>
+  <button onclick="go('india')">🇮🇳 India</button>
+  <button onclick="go('kitchen')">My Kitchen</button>
+  <button onclick="go('settings')">⚙️ Settings</button>
+ </div>
+
+ <button class="nav-action" onclick="showFavorites()">
+  ❤️ Saved
+ </button>
+
+</nav>
+</div>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header id="home" class="hero">
+
+ <div class="hero-copy">
+
+  <div class="eyebrow">👨‍🍳 THE WORLD'S FOOD KINGDOM</div>
+
+  <h1>
+   ALL RECIPE
+   <span>KINGS</span> 👑
+  </h1>
+
+  <h2>🌎 One Kitchen. Every Country. Endless Recipes.</h2>
+
+  <p>
+   Discover Indian classics, international favorites, sweets,
+   street food, breads, rice dishes, desserts and much more —
+   all in one beautiful cooking kingdom.
+  </p>
+
+  <p>
+   <strong>Made with ❤️ by KESHAV</strong>
+  </p>
+
+  <div class="hero-buttons">
+   <button class="primary" onclick="go('explore')">
+    🍳 Explore Recipes
+   </button>
+
+   <button class="secondary" onclick="go('kitchen')">
+    👨‍🍳 Keshav's Kitchen
+   </button>
+  </div>
+
+  <div class="hero-note">
+   ✨ Search • Filter • Save • Shop • Cook • Enjoy
+  </div>
+
+ </div>
+
+
+ <div class="hero-visual">
+
+  <div class="food-orbit">
+
+   <div class="food-center">🍛</div>
+
+   <div class="food f1">🍕</div>
+   <div class="food f2">🍣</div>
+   <div class="food f3">🍰</div>
+   <div class="food f4">🌮</div>
+   <div class="food f5">🥘</div>
+
+  </div>
+
+  <div class="made-by">
+   ❤️ MADE BY KESHAV
+  </div>
+
+ </div>
+
+</header>
+
+
+<!-- =========================================================
+     EXPLORE
+========================================================= -->
+
+<section id="explore" class="section">
+
+ <div class="section-head">
+  <div>
+   <div class="kicker">DISCOVER</div>
+   <h2>🍽️ Explore the Food Kingdom</h2>
+   <p class="section-sub">
+    Find exactly what you want to cook today.
+   </p>
+  </div>
+
+  <button class="secondary" onclick="clearFilters()">
+   🔄 Clear Filters
+  </button>
+ </div>
+
+
+ <!-- SEARCH -->
+
+ <div class="search-panel">
+
+  <div class="search-line">
+
+   <input
+    id="search"
+    class="search-input"
+    placeholder="🔎 Search paneer, biryani, pizza, jalebi..."
+    oninput="renderRecipes()"
+   >
+
+   <button class="search-btn" onclick="renderRecipes()">
+    SEARCH
+   </button>
+
+  </div>
+
+
+  <div class="filters">
+
+   <button class="filter active" data-diet="Both"
+    onclick="dietFilter('Both',this)">
+    🍽️ Both
+   </button>
+
+   <button class="filter" data-diet="Veg"
+    onclick="dietFilter('Veg',this)">
+    🥬 Vegetarian
+   </button>
+
+   <button class="filter" data-diet="Non-Veg"
+    onclick="dietFilter('Non-Veg',this)">
+    🍗 Non-Veg
+   </button>
+
+   <button class="filter" onclick="toggleAdvanced()">
+    ⚙️ More Filters
+   </button>
+
+  </div>
+
+
+  <div id="advanced" class="advanced">
+
+   <select id="cuisineFilter" onchange="renderRecipes()">
+    <option value="All">🌎 All Cuisines</option>
+    <option value="Indian">🇮🇳 Indian</option>
+    <option value="Italian">🇮🇹 Italian</option>
+    <option value="Chinese">🇨🇳 Chinese</option>
+    <option value="Mexican">🇲🇽 Mexican</option>
+    <option value="Japanese">🇯🇵 Japanese</option>
+    <option value="American">🇺🇸 American</option>
+    <option value="French">🇫🇷 French</option>
+    <option value="Thai">🇹🇭 Thai</option>
+    <option value="Middle Eastern">🌍 Middle Eastern</option>
+   </select>
+
+   <select id="difficultyFilter" onchange="renderRecipes()">
+    <option value="All">⭐ Any Difficulty</option>
+    <option value="Easy">🟢 Easy</option>
+    <option value="Medium">🟡 Medium</option>
+    <option value="Hard">🔴 Hard</option>
+   </select>
+
+   <select id="timeFilter" onchange="renderRecipes()">
+    <option value="All">⏱️ Any Time</option>
+    <option value="15">⚡ Under 15 min</option>
+    <option value="30">🔥 Under 30 min</option>
+    <option value="60">🍳 Under 60 min</option>
+   </select>
+
+   <select id="sortFilter" onchange="renderRecipes()">
+    <option value="popular">🔥 Popular</option>
+    <option value="rating">⭐ Rating</option>
+    <option value="name">🔤 Name</option>
+    <option value="time">⏱️ Fastest</option>
+   </select>
+
+  </div>
+
+  <div id="resultCount" class="result-count"></div>
+
+ </div>
+
+
+ <!-- CATEGORIES -->
+
+ <div style="margin-top:45px">
+
+  <div class="kicker">BROWSE BY CATEGORY</div>
+  <h2 style="font-size:30px;margin:6px 0 20px">
+   👑 Pick Your Food Kingdom
+  </h2>
+
+  <div class="category-grid">
+
+   <button class="category" onclick="category('Sabzi')">
+    <div class="icon">🥘</div>
+    <b>Sabzi & Curry</b>
+   </button>
+
+   <button class="category" onclick="category('Sweet')">
+    <div class="icon">🍬</div>
+    <b>Sweets</b>
+   </button>
+
+   <button class="category" onclick="category('Rice')">
+    <div class="icon">🍚</div>
+    <b>Rice</b>
+   </button>
+
+   <button class="category" onclick="category('Bread')">
+    <div class="icon">🫓</div>
+    <b>Breads</b>
+   </button>
+
+   <button class="category" onclick="category('Snack')">
+    <div class="icon">🍟</div>
+    <b>Snacks</b>
+   </button>
+
+   <button class="category" onclick="category('Dessert')">
+    <div class="icon">🍰</div>
+    <b>Desserts</b>
+   </button>
+
+   <button class="category" onclick="category('Breakfast')">
+    <div class="icon">🥞</div>
+    <b>Breakfast</b>
+   </button>
+
+   <button class="category" onclick="category('International')">
+    <div class="icon">🌎</div>
+    <b>World Food</b>
+   </button>
+
+  </div>
+
+
+  <!-- SUB CATEGORY -->
+
+  <div class="subcategory-area">
+
+   <div class="sub-title">
+    <h3>🥘 Sabzi & 🍬 Sweet Collections</h3>
+    <span style="color:var(--muted);font-size:12px">
+     Keshav's picks ❤️
+    </span>
+   </div>
+
+   <div class="sub-pills">
+
+    <button class="sub-pill" onclick="subCategory('Paneer')">
+     🧀 Paneer
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Potato')">
+     🥔 Potato
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Dal')">
+     🫘 Dal
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Chicken')">
+     🍗 Chicken
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Indian Sweet')">
+     🇮🇳 Indian Sweets
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Chocolate')">
+     🍫 Chocolate
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Cake')">
+     🎂 Cakes
+    </button>
+
+    <button class="sub-pill" onclick="subCategory('Ice Cream')">
+     🍨 Ice Cream
+    </button>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURED
+========================================================= -->
+
+<section class="section" style="padding-top:10px">
+
+ <div class="section-head">
+  <div>
+   <div class="kicker">KESHAV'S PICKS</div>
+   <h2>🔥 Today's Favorites</h2>
+  </div>
+ </div>
+
+ <div class="featured">
+
+  <div class="feature-card big">
+
+   <div class="feature-emoji">🍛</div>
+
+   <div class="feature-content">
+    <div class="kicker" style="color:#ffd08a">INDIA</div>
+    <h3>Royal Chicken Biryani</h3>
+    <p>
+     Fragrant rice, aromatic spices and tender chicken —
+     a true celebration dish.
+    </p>
+
+    <button class="primary" onclick="openRecipeByName('Chicken Biryani')">
+     👨‍🍳 Cook This
+    </button>
+   </div>
+
+  </div>
+
+
+  <div class="feature-card small">
+
+   <div class="feature-emoji">🍫</div>
+
+   <div class="feature-content">
+    <div class="kicker" style="color:#e0d2ff">DESSERT</div>
+    <h3>Choco Lava Cake</h3>
+
+    <p>
+     Warm cake. Melting chocolate. Pure happiness.
+    </p>
+
+    <button class="primary"
+     onclick="openRecipeByName('Choco Lava Cake')">
+     🍫 View Recipe
+    </button>
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================================================
+     RECIPE RESULTS
+========================================================= -->
+
+<section class="section" style="padding-top:20px">
+
+ <div class="section-head">
+
+  <div>
+   <div class="kicker">RECIPE LIBRARY</div>
+   <h2 id="recipeHeading">🍴 All Recipes</h2>
+  </div>
+
+  <button class="secondary" onclick="showFavorites()">
+   ❤️ My Favorites
+  </button>
+
+ </div>
+
+ <div id="recipeGrid" class="recipe-grid"></div>
+
+</section>
+
+
+<!-- =========================================================
+     INDIA MAP
+========================================================= -->
+
+<section id="india" class="india-section">
+
+ <div class="india-inner">
+
+  <div class="section-head">
+
+   <div>
+    <div class="kicker" style="color:#ffb347">
+     KESHAV'S INDIA
+    </div>
+
+    <h2>🇮🇳 India's Food Map</h2>
+
+    <p class="section-sub" style="color:#ffffff88">
+     Explore famous dishes from different Indian states.
+    </p>
+   </div>
+
+  </div>
+
+
+  <div class="india-layout">
+
+   <div class="india-map">
+
+    <button class="state s1"
+     onclick="stateFood('Punjab','Amritsari Kulcha 🫓')">
+     Punjab
+    </button>
+
+    <button class="state s2"
+     onclick="stateFood('Uttar Pradesh','Awadhi Biryani 🍛')">
+     UP
+    </button>
+
+    <button class="state s3"
+     onclick="stateFood('Rajasthan','Dal Baati Churma 🥘')">
+     Rajasthan
+    </button>
+
+    <button class="state s4"
+     onclick="stateFood('Bihar','Litti Chokha 🥟')">
+     Bihar
+    </button>
+
+    <button class="state s5"
+     onclick="stateFood('West Bengal','Rasgulla 🍬')">
+     Bengal
+    </button>
+
+    <button class="state s6"
+     onclick="stateFood('Gujarat','Dhokla 🟨')">
+     Gujarat
+    </button>
+
+    <button class="state s7"
+     onclick="stateFood('Madhya Pradesh','Poha & Jalebi 🍚')">
+     MP
+    </button>
+
+    <button class="state s8"
+     onclick="stateFood('Maharashtra','Vada Pav 🍔')">
+     Maharashtra
+    </button>
+
+    <button class="state s9"
+     onclick="stateFood('Odisha','Pakhala Bhata 🍚')">
+     Odisha
+    </button>
+
+    <button class="state s10"
+     onclick="stateFood('Telangana','Hyderabadi Biryani 🍛')">
+     Telangana
+    </button>
+
+    <button class="state s11"
+     onclick="stateFood('Karnataka','Masala Dosa 🥞')">
+     Karnataka
+    </button>
+
+    <button class="state s12"
+     onclick="stateFood('Andhra Pradesh','Andhra Meals 🌶️')">
+     Andhra
+    </button>
+
+    <button class="state s13"
+     onclick="stateFood('Kerala','Appam & Stew 🥥')">
+     Kerala
+    </button>
+
+    <button class="state s14"
+     onclick="stateFood('Tamil Nadu','Pongal 🍚')">
+     Tamil Nadu
+    </button>
+
+   </div>
+
+
+   <div class="state-info">
+
+    <div class="kicker" style="color:#ffb347">
+     CLICK A STATE
+    </div>
+
+    <h3 id="stateName">India 🇮🇳</h3>
+
+    <div id="stateFood" class="state-food">
+     🍛
+    </div>
+
+    <p id="stateDescription" style="color:#ffffffaa">
+     Choose a state on Keshav's food map to discover
+     one of its famous dishes.
+    </p>
+
+    <br>
+
+    <p style="color:#ffb347;font-weight:900">
+     ❤️ Curated for ALL RECIPE KINGS by KESHAV
+    </p>
+
+   </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================================================
+     MY KITCHEN
+========================================================= -->
+
+<section id="kitchen" class="section">
+
+ <div class="section-head">
+
+  <div>
+   <div class="kicker">YOUR SPACE</div>
+   <h2>👨‍🍳 Keshav's Kitchen</h2>
+   <p class="section-sub">
+    Your saved recipes and cooking tools.
+   </p>
+  </div>
+
+ </div>
+
+
+ <div class="kitchen">
+
+  <div class="kitchen-card">
+
+   <div class="big-icon">❤️</div>
+
+   <h3>My Favorites</h3>
+
+   <p>
+    Save recipes you want to cook again.
+   </p>
+
+   <button onclick="showFavorites()">
+    View Favorites
+   </button>
+
+  </div>
+
+
+  <div class="kitchen-card">
+
+   <div class="big-icon">🛒</div>
+
+   <h3>Shopping List</h3>
+
+   <p>
+    Ingredients from your recipes appear here.
+   </p>
+
+   <button onclick="showShopping()">
+    Open Shopping List
+   </button>
+
+  </div>
+
+
+  <div class="kitchen-card">
+
+   <div class="big-icon">🔥</div>
+
+   <h3>Cooking Mode</h3>
+
+   <p>
+    Follow recipes step by step without distractions.
+   </p>
+
+   <button onclick="openRecipeByName('Matar Paneer')">
+    Start Cooking
+   </button>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================================================
+     SHOPPING
+========================================================= -->
+
+<section class="section" id="shoppingSection" style="display:none">
+
+ <div class="section-head">
+
+  <div>
+   <div class="kicker">KESHAV'S LIST</div>
+   <h2>🛒 Shopping List</h2>
+  </div>
+
+  <button class="secondary" onclick="clearShopping()">
+   Clear
+  </button>
+
+ </div>
+
+ <div id="shoppingList" class="shop-list"></div>
+
+</section>
+
+
+<!-- =========================================================
+     SETTINGS
+========================================================= -->
+
+<section id="settings" class="section">
+
+ <div class="section-head">
+
+  <div>
+   <div class="kicker">PERSONALIZE</div>
+   <h2>⚙️ Keshav's Settings</h2>
+   <p class="section-sub">
+    Change the way ALL RECIPE KINGS looks and sounds.
+   </p>
+  </div>
+
+ </div>
+
+
+ <div class="settings">
+
+  <div class="setting">
+
+   <div>
+    <h3>🌐 Language</h3>
+    <p>Choose your interface language.</p>
+   </div>
+
+   <select id="language" onchange="languageChange(this.value)">
+    <option value="English">English 🇬🇧</option>
+    <option value="Hindi">हिंदी 🇮🇳</option>
+    <option value="Spanish">Español 🇪🇸</option>
+    <option value="French">Français 🇫🇷</option>
+    <option value="German">Deutsch 🇩🇪</option>
+    <option value="Japanese">日本語 🇯🇵</option>
+    <option value="Arabic">العربية 🇸🇦</option>
+   </select>
+
+  </div>
+
+
+  <div class="setting">
+
+   <div>
+    <h3>🎨 Theme</h3>
+    <p>Change the look of your kitchen.</p>
+   </div>
+
+   <select onchange="themeChange(this.value)">
+    <option value="normal">🔥 Keshav Orange</option>
+    <option value="dark">🌙 Dark Kitchen</option>
+    <option value="green">🌿 Fresh Green</option>
+    <option value="purple">💜 Royal Purple</option>
+   </select>
+
+  </div>
+
+
+  <div class="setting">
+
+   <div>
+    <h3>🔊 Sound</h3>
+    <p>Control website sound.</p>
+   </div>
+
+   <div>
+    <input id="volume" type="range"
+     min="0" max="100" value="50"
+     oninput="volumeChange(this.value)">
+
+    <strong id="volumeText">50%</strong>
+   </div>
+
+  </div>
+
+
+  <div class="setting">
+
+   <div>
+    <h3>🥬🍗 Food Mode</h3>
+    <p>Choose which recipes you want.</p>
+   </div>
+
+   <select onchange="dietFromSettings(this.value)">
+
+    <option value="Both">🥬🍗 Both</option>
+    <option value="Veg">🥬 Veg Only</option>
+    <option value="Non-Veg">🍗 Non-Veg Only</option>
+
+   </select>
+
+  </div>
+
+
+  <div class="setting">
+
+   <div>
+    <h3>🔔 Cooking Notifications</h3>
+    <p>Enable cooking reminders.</p>
+   </div>
+
+   <input type="checkbox" checked
+    onchange="toast(this.checked?'🔔 Notifications ON':'🔕 Notifications OFF')">
+
+  </div>
+
+
+  <div class="setting">
+
+   <div>
+    <h3>👑 Creator</h3>
+    <p>Who made this food kingdom?</p>
+   </div>
+
+   <strong style="color:var(--orange)">
+    ❤️ KESHAV
+   </strong>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+ <div class="footer-brand">
+  🍽️ ALL <span>RECIPE KINGS</span> 👑
+ </div>
+
+ <div class="footer-made">
+  ❤️ MADE WITH LOVE BY KESHAV ❤️
+ </div>
+
+ <div class="footer-links">
+  <span onclick="go('home')">Home</span>
+  <span onclick="go('explore')">Recipes</span>
+  <span onclick="go('india')">India Map</span>
+  <span onclick="go('kitchen')">My Kitchen</span>
+  <span onclick="go('settings')">Settings</span>
+ </div>
+
+ <p class="copyright">
+  © 2026 ALL RECIPE KINGS • Designed & Created by KESHAV
+ </p>
+
+</footer>
+
+
+<!-- =========================================================
+     RECIPE MODAL
+========================================================= -->
+
+<div id="recipeModal" class="modal">
+
+ <div class="modal-box">
+
+  <div class="modal-top">
+
+   <button class="close" onclick="closeModal()">×</button>
+
+   <div id="modalEmoji" class="modal-emoji">🍛</div>
+
+   <h2 id="modalTitle">Recipe</h2>
+
+   <p id="modalDescription"></p>
+
+  </div>
+
+
+  <div class="modal-body">
+
+   <div id="modalMeta" class="modal-meta"></div>
+
+
+   <div class="recipe-columns">
+
+    <div>
+
+     <h3>🥕 Ingredients</h3>
+
+     <ul id="modalIngredients" class="ingredients"></ul>
+
+    </div>
+
+
+    <div>
+
+     <h3>👨‍🍳 Instructions</h3>
+
+     <ol id="modalSteps" class="steps"></ol>
+
+    </div>
+
+   </div>
+
+
+   <div class="modal-buttons">
+
+    <button class="cook-btn" onclick="startCooking()">
+     🔥 Start Cooking Mode
+    </button>
+
+    <button class="shop-btn" onclick="addCurrentToShopping()">
+     🛒 Add Ingredients
+    </button>
+
+    <button class="print-btn" onclick="window.print()">
+     🖨️ Print
+    </button>
+
+   </div>
+
+
+   <p style="margin-top:20px;color:var(--orange);font-weight:900">
+    👑 Recipe from ALL RECIPE KINGS • Made by KESHAV ❤️
+   </p>
+
+  </div>
+
+ </div>
+
+</div>
+
+
+<!-- =========================================================
+     COOK MODE
+========================================================= -->
+
+<div id="cookMode" class="cook-mode">
+
+ <div class="cook-header">
+
+  <strong id="cookTitle">🔥 Cooking Mode</strong>
+
+  <button class="secondary" onclick="closeCooking()">
+   ✕ Exit
+  </button>
+
+ </div>
+
+
+ <div class="cook-content">
+
+  <div>
+
+   <div id="cookEmoji" class="cook-emoji">🍛</div>
+
+   <div id="cookStepLabel">
+    Step 1
+   </div>
+
+   <h2 id="cookStep">
+    Let's start cooking!
+   </h2>
+
+   <p id="cookHint">
+    Follow each step carefully.
+   </p>
+
+   <div class="progress">
+    <span id="cookProgress"></span>
+   </div>
+
+   <div id="cookProgressText">
+    1 / 1
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="cook-controls">
+
+  <button onclick="previousStep()">← Previous</button>
+
+  <button class="primary" onclick="nextStep()">
+   Next →
+  </button>
+
+ </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+
+/* =========================================================
+   RECIPE DATABASE
+   100+ recipes using compact data.
+========================================================= */
+
+const recipes = [
+
+/* ---------- SABZI ---------- */
+
+["Matar Paneer","Sabzi","Veg","Indian","🧀",4.9,35,"Easy",
+ "Creamy paneer and peas in a rich tomato gravy.",
+ ["Paneer 250g","Green peas 1 cup","Tomatoes 3","Onion 1","Ginger-garlic 1 tbsp","Turmeric ½ tsp","Chilli powder 1 tsp","Garam masala 1 tsp","Oil 2 tbsp","Salt"],
+ ["Heat oil and lightly fry paneer.","Sauté onion until golden.","Add ginger-garlic and tomatoes.","Add spices and cook until oil separates.","Add peas and water.","Add paneer and simmer.","Finish with garam masala and coriander."]],
+
+["Kadai Paneer","Sabzi","Veg","Indian","🥘",4.8,35,"Easy",
+ "Paneer, capsicum and aromatic kadai spices.",
+ ["Paneer 250g","Capsicum 1","Onion 1","Tomatoes 2","Kadai masala 2 tbsp","Ginger 1 tsp","Oil 2 tbsp","Salt"],
+ ["Heat oil.","Sauté onion and capsicum.","Add ginger and tomatoes.","Add kadai masala.","Cook until tomatoes soften.","Add paneer and simmer."]],
+
+["Shahi Paneer","Sabzi","Veg","Indian","👑",4.9,40,"Medium",
+ "Royal paneer cooked in a creamy nutty gravy.",
+ ["Paneer 250g","Onion 1","Tomatoes 2","Cashews 15","Cream 3 tbsp","Butter 2 tbsp","Garam masala","Salt"],
+ ["Soak cashews and blend.","Cook onion and tomato.","Blend into a smooth gravy.","Add butter and spices.","Add paneer.","Finish with cream."]],
+
+["Palak Paneer","Sabzi","Veg","Indian","🥬",4.9,35,"Easy",
+ "Soft paneer in a vibrant spinach gravy.",
+ ["Spinach 500g","Paneer 250g","Onion 1","Tomato 1","Ginger-garlic 1 tbsp","Green chilli","Cream 2 tbsp"],
+ ["Blanch spinach.","Blend spinach.","Sauté onion and ginger-garlic.","Add tomato.","Add spinach puree.","Add paneer.","Simmer and finish with cream."]],
+
+["Paneer Butter Masala","Sabzi","Veg","Indian","🧈",4.9,40,"Medium",
+ "Buttery tomato gravy with tender paneer.",
+ ["Paneer 250g","Tomatoes 4","Butter 3 tbsp","Cream 3 tbsp","Cashews 12","Garam masala"],
+ ["Blend tomatoes and cashews.","Cook the puree.","Add butter and spices.","Add paneer.","Simmer.","Finish with cream."]],
+
+["Malai Kofta","Sabzi","Veg","Indian","🥘",4.8,55,"Hard",
+ "Soft paneer-potato koftas in creamy gravy.",
+ ["Paneer 200g","Potatoes 2","Cornflour","Tomatoes","Cashews","Cream","Spices"],
+ ["Make kofta mixture.","Shape balls.","Fry until golden.","Prepare creamy gravy.","Add koftas before serving."]],
+
+["Chole Masala","Sabzi","Veg","Indian","🫘",4.9,45,"Easy",
+ "Spicy chickpea curry.",
+ ["Chickpeas 2 cups","Onion","Tomatoes","Chole masala","Ginger-garlic","Oil","Salt"],
+ ["Cook chickpeas.","Prepare onion-tomato masala.","Add spices.","Add chickpeas and water.","Simmer for 15 minutes."]],
+
+["Rajma Masala","Sabzi","Veg","Indian","🫘",4.8,55,"Easy",
+ "Kidney beans cooked in a tomato-onion gravy.",
+ ["Rajma 2 cups","Tomatoes 3","Onion 1","Ginger-garlic","Garam masala","Oil"],
+ ["Soak rajma.","Pressure cook.","Prepare gravy.","Add rajma.","Simmer until thick."]],
+
+["Dal Makhani","Sabzi","Veg","Indian","🍲",4.9,90,"Medium",
+ "Slow-cooked black lentils with butter and cream.",
+ ["Black urad dal","Rajma","Tomatoes","Butter","Cream","Ginger-garlic","Spices"],
+ ["Soak lentils.","Pressure cook.","Prepare tomato masala.","Combine.","Simmer slowly.","Add butter and cream."]],
+
+["Dal Tadka","Sabzi","Veg","Indian","🍲",4.8,35,"Easy",
+ "Yellow lentils finished with a fragrant tempering.",
+ ["Toor dal","Tomato","Onion","Garlic","Cumin","Ghee","Chilli"],
+ ["Cook dal.","Prepare tadka with ghee.","Add garlic and cumin.","Pour tadka over dal.","Serve hot."]],
+
+["Aloo Gobi","Sabzi","Veg","Indian","🥔",4.8,35,"Easy",
+ "Classic potato and cauliflower curry.",
+ ["Potatoes","Cauliflower","Tomatoes","Turmeric","Cumin","Chilli","Coriander"],
+ ["Heat oil.","Add cumin.","Add potato and cauliflower.","Add spices.","Cover and cook until tender.","Add coriander."]],
+
+["Aloo Jeera","Sabzi","Veg","Indian","🥔",4.7,25,"Easy",
+ "Simple cumin-flavored potatoes.",
+ ["Potatoes","Cumin","Green chilli","Turmeric","Coriander","Oil"],
+ ["Boil potatoes.","Heat oil and cumin.","Add potatoes.","Add spices.","Cook until crisp."]],
+
+["Bhindi Masala","Sabzi","Veg","Indian","🌿",4.7,35,"Easy",
+ "Okra cooked with onion and spices.",
+ ["Bhindi","Onion","Tomato","Cumin","Turmeric","Coriander"],
+ ["Wash and dry bhindi.","Sauté bhindi.","Cook onion and tomato.","Combine and season."]],
+
+["Baingan Bharta","Sabzi","Veg","Indian","🍆",4.8,45,"Medium",
+ "Smoky roasted eggplant mash.",
+ ["Eggplant","Onion","Tomato","Green chilli","Coriander","Oil"],
+ ["Roast eggplant.","Remove skin.","Mash.","Cook onion and tomato.","Combine with eggplant."]],
+
+["Dum Aloo","Sabzi","Veg","Indian","🥔",4.8,55,"Medium",
+ "Baby potatoes in a spiced yogurt gravy.",
+ ["Baby potatoes","Yogurt","Tomatoes","Kashmiri chilli","Garam masala"],
+ ["Boil potatoes.","Fry lightly.","Prepare yogurt gravy.","Add potatoes.","Cook covered."]],
+
+["Mix Vegetable Curry","Sabzi","Veg","Indian","🥕",4.6,40,"Easy",
+ "Colorful vegetables in a spiced curry.",
+ ["Carrot","Beans","Peas","Potato","Capsicum","Tomato","Spices"],
+ ["Sauté vegetables.","Add tomato.","Add spices and water.","Cover and cook."]],
+
+["Butter Chicken","Sabzi","Non-Veg","Indian","🍗",4.9,55,"Medium",
+ "Tender chicken in a buttery tomato gravy.",
+ ["Chicken 500g","Yogurt","Tomatoes","Butter","Cream","Garam masala","Kasuri methi"],
+ ["Marinate chicken.","Cook chicken.","Prepare tomato gravy.","Add butter and spices.","Add chicken.","Finish with cream."]],
+
+["Chicken Curry","Sabzi","Non-Veg","Indian","🍗",4.8,50,"Medium",
+ "Classic home-style Indian chicken curry.",
+ ["Chicken","Onion","Tomato","Ginger-garlic","Turmeric","Chilli","Coriander"],
+ ["Brown chicken.","Cook onion.","Add ginger-garlic and tomato.","Add spices.","Add chicken and water.","Simmer until cooked."]],
+
+["Chicken Tikka Masala","Sabzi","Non-Veg","Indian","🍗",4.9,60,"Medium",
+ "Charred chicken in creamy spiced tomato sauce.",
+ ["Chicken","Yogurt","Tikka spices","Tomatoes","Cream","Butter"],
+ ["Marinate chicken.","Grill or pan-cook.","Prepare tomato sauce.","Combine chicken and sauce.","Finish with cream."]],
+
+["Rogan Josh","Sabzi","Non-Veg","Indian","🍖",4.8,100,"Hard",
+ "Aromatic Kashmiri-style meat curry.",
+ ["Mutton","Yogurt","Kashmiri chilli","Ginger","Fennel","Cardamom","Oil"],
+ ["Brown meat.","Add whole spices.","Add yogurt gradually.","Add chilli and water.","Cook slowly until tender."]],
+
+["Fish Curry","Sabzi","Non-Veg","Indian","🐟",4.8,45,"Medium",
+ "Tangy and spicy Indian fish curry.",
+ ["Fish","Tomato","Onion","Coconut milk","Turmeric","Chilli","Coriander"],
+ ["Marinate fish.","Sear lightly.","Prepare curry base.","Add coconut milk.","Add fish and simmer gently."]],
+
+["Egg Curry","Sabzi","Non-Veg","Indian","🥚",4.7,35,"Easy",
+ "Boiled eggs in onion-tomato gravy.",
+ ["Eggs","Onion","Tomato","Ginger-garlic","Turmeric","Chilli","Garam masala"],
+ ["Boil eggs.","Prepare gravy.","Add spices.","Add eggs.","Simmer for 10 minutes."]],
+
+/* ---------- RICE ---------- */
+
+["Chicken Biryani","Rice","Non-Veg","Indian","🍛",5.0,90,"Hard",
+ "Fragrant basmati rice layered with spiced chicken.",
+ ["Chicken 500g","Basmati rice 2 cups","Yogurt","Onions","Biryani masala","Mint","Coriander","Saffron"],
+ ["Marinate chicken.","Parboil rice.","Cook chicken masala.","Layer chicken and rice.","Add mint and fried onions.","Cover and cook on low heat."]],
+
+["Mutton Biryani","Rice","Non-Veg","Indian","🍖",4.9,120,"Hard",
+ "Rich slow-cooked mutton biryani.",
+ ["Mutton","Basmati rice","Yogurt","Onion","Biryani spices","Mint","Saffron"],
+ ["Marinate mutton.","Cook until tender.","Parboil rice.","Layer rice and meat.","Dum cook until aromatic."]],
+
+["Veg Biryani","Rice","Veg","Indian","🍚",4.8,65,"Medium",
+ "Aromatic rice with mixed vegetables.",
+ ["Basmati rice","Carrot","Beans","Peas","Potato","Yogurt","Biryani masala","Mint"],
+ ["Cook vegetables.","Parboil rice.","Layer vegetables and rice.","Add herbs.","Dum cook."]],
+
+["Hyderabadi Biryani","Rice","Non-Veg","Indian","🍛",5.0,100,"Hard",
+ "Famous Hyderabad-style dum biryani.",
+ ["Chicken","Basmati rice","Yogurt","Fried onions","Mint","Saffron","Biryani spices"],
+ ["Marinate chicken.","Layer raw marinated chicken with parboiled rice.","Add saffron and herbs.","Dum cook until chicken is tender."]],
+
+["Jeera Rice","Rice","Veg","Indian","🍚",4.6,25,"Easy",
+ "Fragrant cumin rice.",
+ ["Basmati rice","Cumin","Ghee","Bay leaf","Salt"],
+ ["Wash rice.","Heat ghee and cumin.","Add rice and water.","Cook until fluffy."]],
+
+["Pulao","Rice","Veg","Indian","🍚",4.7,35,"Easy",
+ "Simple fragrant vegetable pulao.",
+ ["Rice","Mixed vegetables","Whole spices","Ghee","Salt"],
+ ["Sauté spices.","Add vegetables.","Add rice and water.","Cook covered."]],
+
+["Fried Rice","Rice","Veg","Chinese","🍚",4.8,25,"Easy",
+ "Fast wok-fried rice with vegetables.",
+ ["Cooked rice","Carrot","Beans","Spring onion","Soy sauce","Garlic"],
+ ["Heat wok.","Sauté garlic and vegetables.","Add rice.","Add soy sauce.","Toss on high heat."]],
+
+["Chicken Fried Rice","Rice","Non-Veg","Chinese","🍗",4.8,35,"Easy",
+ "Wok-fried rice with chicken.",
+ ["Cooked rice","Chicken","Egg","Carrot","Spring onion","Soy sauce"],
+ ["Cook chicken.","Scramble egg.","Add vegetables.","Add rice.","Add soy sauce and toss."]],
+
+["Schezwan Rice","Rice","Veg","Chinese","🌶️",4.7,30,"Easy",
+ "Spicy Indo-Chinese fried rice.",
+ ["Rice","Schezwan sauce","Vegetables","Garlic","Spring onion"],
+ ["Stir-fry vegetables.","Add rice.","Add Schezwan sauce.","Toss over high heat."]],
+
+["Lemon Rice","Rice","Veg","Indian","🍋",4.6,25,"Easy",
+ "South Indian lemon-flavored rice.",
+ ["Cooked rice","Lemon","Peanuts","Mustard seeds","Curry leaves","Turmeric"],
+ ["Prepare tempering.","Add peanuts.","Add turmeric.","Mix with rice.","Finish with lemon juice."]],
+
+["Coconut Rice","Rice","Veg","Indian","🥥",4.7,30,"Easy",
+ "Fragrant rice with coconut.",
+ ["Rice","Fresh coconut","Mustard seeds","Curry leaves","Green chilli"],
+ ["Prepare tempering.","Add coconut.","Mix with cooked rice.","Season."]],
+
+["Curd Rice","Rice","Veg","Indian","🥣",4.7,20,"Easy",
+ "Cooling South Indian yogurt rice.",
+ ["Cooked rice","Yogurt","Milk","Mustard seeds","Curry leaves"],
+ ["Cool rice.","Mix yogurt and milk.","Prepare tempering.","Combine."]],
+
+/* ---------- SNACKS ---------- */
+
+["Samosa","Snack","Veg","Indian","🥟",4.9,55,"Medium",
+ "Crispy pastry filled with spiced potatoes.",
+ ["Maida","Potatoes","Peas","Cumin","Chilli","Chaat masala","Oil"],
+ ["Make dough.","Prepare potato filling.","Shape cones.","Fill and seal.","Deep fry until golden."]],
+
+["Pakora","Snack","Veg","Indian","🍟",4.7,25,"Easy",
+ "Crispy gram-flour vegetable fritters.",
+ ["Besan","Onion","Potato","Green chilli","Ajwain","Salt"],
+ ["Make thick batter.","Add vegetables.","Heat oil.","Fry spoonfuls until golden."]],
+
+["Vada Pav","Snack","Veg","Indian","🍔",4.9,35,"Medium",
+ "Mumbai's famous potato street-food burger.",
+ ["Potatoes","Besan","Pav","Garlic","Green chilli","Chutney"],
+ ["Make potato vada.","Dip in besan.","Fry.","Toast pav.","Add chutneys and vada."]],
+
+["Pav Bhaji","Snack","Veg","Indian","🥘",4.9,40,"Easy",
+ "Mashed vegetables cooked in buttery spices.",
+ ["Potatoes","Cauliflower","Peas","Tomato","Pav bhaji masala","Butter","Pav"],
+ ["Boil vegetables.","Mash.","Cook tomato masala.","Add vegetables and masala.","Serve with buttered pav."]],
+
+["Aloo Tikki","Snack","Veg","Indian","🥔",4.7,35,"Easy",
+ "Crispy spiced potato patties.",
+ ["Potatoes","Cornflour","Chilli","Coriander","Chaat masala"],
+ ["Mash potatoes.","Mix spices.","Shape patties.","Shallow fry until crisp."]],
+
+["Dhokla","Snack","Veg","Indian","🟨",4.8,30,"Medium",
+ "Soft steamed Gujarati savory cake.",
+ ["Besan","Yogurt","Eno","Mustard seeds","Curry leaves","Sugar"],
+ ["Prepare batter.","Add Eno.","Steam until fluffy.","Prepare tempering.","Pour over dhokla."]],
+
+["Kachori","Snack","Veg","Indian","🥟",4.7,60,"Medium",
+ "Crispy stuffed Indian pastry.",
+ ["Maida","Moong dal","Fennel","Chilli","Spices","Oil"],
+ ["Prepare dough.","Prepare dal filling.","Stuff and shape.","Deep fry slowly."]],
+
+["Spring Rolls","Snack","Veg","Chinese","🥢",4.7,35,"Medium",
+ "Crispy rolls filled with vegetables.",
+ ["Spring roll wrappers","Cabbage","Carrot","Capsicum","Soy sauce"],
+ ["Stir-fry vegetables.","Cool filling.","Roll wrappers.","Seal.","Fry until crisp."]],
+
+["Falafel","Snack","Veg","Middle Eastern","🧆",4.8,40,"Medium",
+ "Crispy chickpea herb fritters.",
+ ["Soaked chickpeas","Parsley","Garlic","Onion","Cumin","Coriander"],
+ ["Blend chickpeas and herbs.","Season.","Shape.","Fry or bake until crisp."]],
+
+/* ---------- BREAD ---------- */
+
+["Naan","Bread","Veg","Indian","🫓",4.9,45,"Medium",
+ "Soft Indian flatbread.",
+ ["Maida","Yogurt","Yeast","Salt","Water","Butter"],
+ ["Make dough.","Rest until risen.","Roll naan.","Cook on very hot surface.","Brush with butter."]],
+
+["Garlic Naan","Bread","Veg","Indian","🧄",4.9,50,"Medium",
+ "Naan topped with garlic and coriander.",
+ ["Maida","Yogurt","Yeast","Garlic","Coriander","Butter"],
+ ["Prepare dough.","Roll naan.","Top with garlic.","Cook.","Brush with butter."]],
+
+["Roti","Bread","Veg","Indian","🫓",4.7,25,"Easy",
+ "Simple whole-wheat Indian flatbread.",
+ ["Whole wheat flour","Water","Salt"],
+ ["Knead dough.","Rest.","Roll thin.","Cook on hot tawa.","Finish directly over flame if desired."]],
+
+["Butter Roti","Bread","Veg","Indian","🧈",4.7,30,"Easy",
+ "Soft wheat roti finished with butter.",
+ ["Whole wheat flour","Water","Salt","Butter"],
+ ["Make dough.","Roll.","Cook.","Brush with butter."]],
+
+["Paratha","Bread","Veg","Indian","🫓",4.8,35,"Medium",
+ "Layered Indian flatbread.",
+ ["Wheat flour","Water","Salt","Oil"],
+ ["Make dough.","Roll with oil.","Fold layers.","Roll again.","Cook with oil or ghee."]],
+
+["Aloo Paratha","Bread","Veg","Indian","🥔",4.9,45,"Medium",
+ "Stuffed potato flatbread.",
+ ["Wheat flour","Potatoes","Green chilli","Coriander","Chilli","Garam masala"],
+ ["Prepare dough.","Make potato filling.","Stuff.","Roll carefully.","Cook with ghee."]],
+
+["Poori","Bread","Veg","Indian","🫓",4.8,35,"Medium",
+ "Deep-fried puffed Indian bread.",
+ ["Wheat flour","Water","Salt","Oil"],
+ ["Make firm dough.","Roll small discs.","Deep fry until puffed."]],
+
+["Dosa","Bread","Veg","Indian","🥞",4.9,45,"Medium",
+ "Crispy fermented rice-lentil crepe.",
+ ["Rice","Urad dal","Fenugreek","Salt","Water"],
+ ["Soak rice and dal.","Grind.","Ferment.","Spread thinly on hot pan.","Cook crisp."]],
+
+["Masala Dosa","Bread","Veg","Indian","🥞",5.0,55,"Medium",
+ "Crispy dosa filled with spiced potatoes.",
+ ["Dosa batter","Potatoes","Onion","Mustard seeds","Curry leaves","Turmeric"],
+ ["Prepare potato masala.","Spread dosa.","Add filling.","Fold and serve."]],
+
+/* ---------- SWEETS ---------- */
+
+["Jalebi","Sweet","Veg","Indian","🌀",4.9,50,"Medium",
+ "Crispy spirals soaked in sugar syrup.",
+ ["Maida","Yogurt","Cornflour","Sugar","Cardamom","Saffron","Oil"],
+ ["Make batter.","Rest batter.","Prepare syrup.","Pipe spirals into hot oil.","Fry crisp.","Soak in syrup."]],
+
+["Gulab Jamun","Sweet","Veg","Indian","🍡",5.0,55,"Medium",
+ "Soft milk-solid dumplings in fragrant syrup.",
+ ["Khoya","Maida","Milk","Sugar","Cardamom","Oil or ghee"],
+ ["Make soft dough.","Shape balls.","Prepare syrup.","Fry gently.","Soak in warm syrup."]],
+
+["Rasgulla","Sweet","Veg","Indian","⚪",4.9,50,"Medium",
+ "Soft chenna balls cooked in sugar syrup.",
+ ["Milk","Lemon juice","Sugar","Water","Cardamom"],
+ ["Curdle milk.","Strain chenna.","Knead smooth.","Shape balls.","Cook in boiling syrup."]],
+
+["Rasmalai","Sweet","Veg","Indian","🥛",4.9,70,"Hard",
+ "Soft cheese discs soaked in saffron milk.",
+ ["Milk","Lemon","Sugar","Cardamom","Saffron","Pistachios"],
+ ["Make chenna.","Shape discs.","Cook in syrup.","Prepare thickened saffron milk.","Soak discs."]],
+
+["Kaju Katli","Sweet","Veg","Indian","💎",4.9,35,"Medium",
+ "Thin diamond-shaped cashew fudge.",
+ ["Cashew powder","Sugar","Water","Cardamom","Silver leaf optional"],
+ ["Make sugar syrup.","Add cashew powder.","Cook until dough forms.","Roll thin.","Cut diamonds."]],
+
+["Motichoor Laddu","Sweet","Veg","Indian","🟠",4.9,60,"Hard",
+ "Tiny gram-flour pearls formed into laddus.",
+ ["Besan","Sugar","Saffron","Cardamom","Ghee"],
+ ["Prepare thin batter.","Fry tiny boondi.","Make syrup.","Combine.","Shape laddus."]],
+
+["Besan Laddu","Sweet","Veg","Indian","🟡",4.8,40,"Medium",
+ "Roasted gram-flour laddus.",
+ ["Besan","Ghee","Sugar","Cardamom","Nuts"],
+ ["Roast besan in ghee.","Cool slightly.","Add sugar and cardamom.","Shape laddus."]],
+
+["Gajar Halwa","Sweet","Veg","Indian","🥕",4.9,60,"Medium",
+ "Slow-cooked carrot pudding.",
+ ["Carrots","Milk","Sugar","Ghee","Cardamom","Nuts"],
+ ["Grate carrots.","Cook with milk.","Add sugar.","Cook until thick.","Add ghee and nuts."]],
+
+["Moong Dal Halwa","Sweet","Veg","Indian","🟡",4.8,90,"Hard",
+ "Rich festive lentil halwa.",
+ ["Moong dal","Ghee","Sugar","Milk","Cardamom","Nuts"],
+ ["Soak and grind dal.","Roast slowly in ghee.","Add milk.","Add sugar.","Cook until glossy."]],
+
+["Soan Papdi","Sweet","Veg","Indian","🍰",4.6,60,"Hard",
+ "Flaky Indian sweet with a delicate texture.",
+ ["Besan","Maida","Sugar","Ghee","Cardamom"],
+ ["Prepare flour mixture.","Make sugar syrup.","Combine and stretch repeatedly.","Set and cut."]],
+
+["Kheer","Sweet","Veg","Indian","🥛",4.8,50,"Easy",
+ "Creamy rice pudding with cardamom.",
+ ["Rice","Milk","Sugar","Cardamom","Nuts","Saffron"],
+ ["Cook rice in milk.","Simmer slowly.","Add sugar.","Add cardamom and nuts."]],
+
+["Kulfi","Sweet","Veg","Indian","🍨",4.9,30,"Easy",
+ "Dense Indian frozen milk dessert.",
+ ["Full-fat milk","Sugar","Cardamom","Pistachios"],
+ ["Reduce milk.","Add sugar and cardamom.","Cool.","Freeze in molds."]],
+
+["Malpua","Sweet","Veg","Indian","🥞",4.8,50,"Medium",
+ "Soft fried pancakes soaked in syrup.",
+ ["Flour","Milk","Sugar","Fennel","Cardamom","Ghee"],
+ ["Make batter.","Prepare syrup.","Fry small pancakes.","Soak in syrup."]],
+
+["Mysore Pak","Sweet","Veg","Indian","🟨",4.8,45,"Hard",
+ "Rich South Indian gram-flour fudge.",
+ ["Besan","Ghee","Sugar","Water"],
+ ["Make sugar syrup.","Add roasted besan gradually.","Add ghee.","Cook until set.","Cut."]],
+
+["Choco Lava Cake","Dessert","Veg","French","🍫",5.0,25,"Medium",
+ "Warm chocolate cake with a molten center.",
+ ["Dark chocolate","Butter","Flour","Eggs","Sugar","Vanilla"],
+ ["Melt chocolate and butter.","Whisk eggs and sugar.","Combine.","Fold in flour.","Bake at 200°C for about 10–12 minutes.","Serve immediately."]],
+
+["Chocolate Brownie","Dessert","Veg","American","🍫",4.9,40,"Easy",
+ "Rich fudgy chocolate brownies.",
+ ["Dark chocolate","Butter","Flour","Cocoa","Sugar","Eggs","Vanilla"],
+ ["Melt chocolate and butter.","Mix eggs and sugar.","Combine.","Fold in flour and cocoa.","Bake until edges set."]],
+
+["Cheesecake","Dessert","Veg","American","🍰",4.9,90,"Hard",
+ "Creamy baked cheesecake.",
+ ["Cream cheese","Sugar","Eggs","Vanilla","Biscuits","Butter"],
+ ["Make biscuit base.","Prepare filling.","Pour over base.","Bake gently.","Cool completely."]],
+
+["Tiramisu","Dessert","Veg","Italian","☕",4.9,45,"Medium",
+ "Coffee-soaked dessert with mascarpone cream.",
+ ["Ladyfingers","Mascarpone","Coffee","Cocoa","Sugar","Eggs"],
+ ["Prepare coffee.","Make mascarpone cream.","Dip ladyfingers.","Layer with cream.","Chill.","Dust cocoa."]],
+
+["Apple Pie","Dessert","Veg","American","🥧",4.8,90,"Medium",
+ "Classic spiced apple pie.",
+ ["Apples","Flour","Butter","Sugar","Cinnamon","Nutmeg"],
+ ["Make pastry.","Prepare apple filling.","Fill pastry.","Cover.","Bake until golden."]],
+
+["Ice Cream","Dessert","Veg","American","🍨",4.8,30,"Easy",
+ "Creamy homemade vanilla ice cream.",
+ ["Cream","Milk","Sugar","Vanilla"],
+ ["Mix ingredients.","Chill.","Churn or freeze while stirring periodically.","Freeze until firm."]],
+
+/* ---------- BREAKFAST ---------- */
+
+["Poha","Breakfast","Veg","Indian","🍚",4.7,20,"Easy",
+ "Light flattened-rice breakfast with peanuts.",
+ ["Poha","Onion","Peanuts","Mustard seeds","Curry leaves","Turmeric"],
+ ["Rinse poha.","Prepare tempering.","Add onion and peanuts.","Add poha and turmeric.","Cook briefly."]],
+
+["Upma","Breakfast","Veg","Indian","🥣",4.7,25,"Easy",
+ "Savory semolina breakfast.",
+ ["Semolina","Onion","Carrot","Mustard seeds","Curry leaves","Water"],
+ ["Roast semolina.","Prepare tempering.","Add vegetables.","Add water.","Slowly add semolina.","Cook until fluffy."]],
+
+["Idli","Breakfast","Veg","Indian","⚪",4.9,40,"Medium",
+ "Soft steamed fermented rice cakes.",
+ ["Rice","Urad dal","Fenugreek","Salt"],
+ ["Soak.","Grind.","Ferment.","Pour into idli molds.","Steam until cooked."]],
+
+["Medu Vada","Breakfast","Veg","Indian","🍩",4.8,45,"Medium",
+ "Crispy lentil fritters.",
+ ["Urad dal","Pepper","Curry leaves","Green chilli","Salt"],
+ ["Soak dal.","Grind thick.","Add spices.","Shape rings.","Deep fry."]],
+
+["Pancakes","Breakfast","Veg","American","🥞",4.8,25,"Easy",
+ "Fluffy breakfast pancakes.",
+ ["Flour","Milk","Eggs","Sugar","Baking powder","Butter"],
+ ["Mix dry ingredients.","Add wet ingredients.","Make smooth batter.","Cook on greased pan.","Flip when bubbles appear."]],
+
+["French Toast","Breakfast","Veg","French","🍞",4.7,20,"Easy",
+ "Golden bread dipped in sweet egg mixture.",
+ ["Bread","Eggs","Milk","Sugar","Cinnamon","Butter"],
+ ["Whisk egg mixture.","Dip bread.","Cook in butter.","Serve with fruit or syrup."]],
+
+/* ---------- INTERNATIONAL ---------- */
+
+["Pizza Margherita","International","Veg","Italian","🍕",5.0,35,"Medium",
+ "Classic tomato, mozzarella and basil pizza.",
+ ["Pizza dough","Tomato sauce","Mozzarella","Basil","Olive oil"],
+ ["Stretch dough.","Spread sauce.","Add mozzarella.","Bake in a very hot oven.","Add basil and olive oil."]],
+
+["Pepperoni Pizza","International","Non-Veg","Italian","🍕",4.9,35,"Medium",
+ "Classic pizza with spicy pepperoni.",
+ ["Pizza dough","Tomato sauce","Mozzarella","Pepperoni"],
+ ["Stretch dough.","Add sauce and cheese.","Add pepperoni.","Bake until crust is golden."]],
+
+["Pasta Alfredo","International","Veg","Italian","🍝",4.9,30,"Easy",
+ "Creamy parmesan pasta.",
+ ["Pasta","Butter","Garlic","Cream","Parmesan","Black pepper"],
+ ["Boil pasta.","Melt butter.","Add garlic and cream.","Add parmesan.","Toss with pasta."]],
+
+["Spaghetti Bolognese","International","Non-Veg","Italian","🍝",4.9,55,"Medium",
+ "Pasta with rich tomato meat sauce.",
+ ["Spaghetti","Minced meat","Tomatoes","Onion","Garlic","Herbs"],
+ ["Brown meat.","Cook onion and garlic.","Add tomatoes.","Simmer.","Boil pasta.","Combine."]],
+
+["Lasagna","International","Non-Veg","Italian","🍝",90,"Hard",
+ "Layered pasta with sauce and cheese.",
+ ["Lasagna sheets","Minced meat","Tomato sauce","Mozzarella","Ricotta","Parmesan"],
+ ["Prepare meat sauce.","Prepare cheese mixture.","Layer pasta, sauce and cheese.","Bake until bubbling."]],
+
+["Chicken Tacos","International","Non-Veg","Mexican","🌮",4.9,35,"Easy",
+ "Seasoned chicken tacos with fresh toppings.",
+ ["Chicken","Taco shells","Lettuce","Tomato","Cheese","Cumin","Paprika","Lime"],
+ ["Season chicken.","Cook chicken.","Warm shells.","Fill with chicken.","Add vegetables and cheese."]],
+
+["Burrito","International","Veg","Mexican","🌯",4.8,40,"Medium",
+ "Large tortilla filled with beans, rice and vegetables.",
+ ["Tortilla","Rice","Beans","Corn","Salsa","Cheese"],
+ ["Warm tortilla.","Add rice and beans.","Add vegetables.","Add salsa and cheese.","Roll tightly."]],
+
+["Guacamole","International","Veg","Mexican","🥑",4.8,10,"Easy",
+ "Fresh avocado dip.",
+ ["Avocado","Lime","Tomato","Onion","Coriander","Salt"],
+ ["Mash avocado.","Add chopped vegetables.","Add lime and salt.","Mix gently."]],
+
+["Sushi","International","Non-Veg","Japanese","🍣",4.9,60,"Hard",
+ "Japanese rice rolls with seafood and vegetables.",
+ ["Sushi rice","Nori","Rice vinegar","Cucumber","Avocado","Seafood"],
+ ["Cook sushi rice.","Season with vinegar.","Spread rice over nori.","Add filling.","Roll tightly.","Slice."]],
+
+["Ramen","International","Non-Veg","Japanese","🍜",4.9,70,"Hard",
+ "Japanese noodle soup with rich broth.",
+ ["Ramen noodles","Broth","Egg","Chicken","Spring onion","Soy sauce"],
+ ["Prepare broth.","Cook noodles.","Cook chicken.","Assemble bowl.","Add egg and spring onion."]],
+
+["Chicken Noodles","International","Non-Veg","Chinese","🍜",4.8,30,"Easy",
+ "Stir-fried noodles with chicken and vegetables.",
+ ["Noodles","Chicken","Carrot","Capsicum","Spring onion","Soy sauce"],
+ ["Cook noodles.","Stir-fry chicken.","Add vegetables.","Add noodles.","Toss with sauce."]],
+
+["Chow Mein","International","Veg","Chinese","🍜",4.8,25,"Easy",
+ "Stir-fried noodles with crunchy vegetables.",
+ ["Noodles","Cabbage","Carrot","Capsicum","Soy sauce","Garlic"],
+ ["Boil noodles.","Stir-fry vegetables.","Add noodles.","Add sauce.","Toss on high heat."]],
+
+["Dumplings","International","Veg","Chinese","🥟",4.8,45,"Medium",
+ "Steamed or pan-fried stuffed dumplings.",
+ ["Flour","Cabbage","Carrot","Spring onion","Soy sauce"],
+ ["Make dough.","Prepare filling.","Stuff wrappers.","Steam or pan-fry.","Serve with sauce."]],
+
+["Pad Thai","International","Veg","Thai","🍜",4.8,35,"Medium",
+ "Thai rice noodles with tangy sauce.",
+ ["Rice noodles","Tofu","Bean sprouts","Peanuts","Tamarind sauce","Lime"],
+ ["Soak noodles.","Stir-fry tofu.","Add noodles and sauce.","Toss.","Finish with sprouts and peanuts."]],
+
+["Greek Salad","International","Veg","Greek","🥗",4.8,15,"Easy",
+ "Fresh tomato, cucumber, olive and feta salad.",
+ ["Tomatoes","Cucumber","Olives","Feta","Onion","Olive oil","Oregano"],
+ ["Chop vegetables.","Add feta and olives.","Dress with olive oil.","Season with oregano."]],
+
+["Hummus","International","Veg","Middle Eastern","🧆",4.8,15,"Easy",
+ "Creamy chickpea and tahini dip.",
+ ["Chickpeas","Tahini","Lemon","Garlic","Olive oil","Salt"],
+ ["Blend chickpeas.","Add tahini and lemon.","Blend until creamy.","Drizzle olive oil."]],
+
+["Falafel Wrap","International","Veg","Middle Eastern","🌯",4.8,35,"Medium",
+ "Falafel with salad and sauce in flatbread.",
+ ["Falafel","Flatbread","Lettuce","Tomato","Tahini","Cucumber"],
+ ["Prepare falafel.","Warm bread.","Add salad.","Add falafel and sauce.","Roll."]],
+
+["Croissant","International","Veg","French","🥐",4.9,240,"Hard",
+ "Buttery laminated French pastry.",
+ ["Flour","Butter","Yeast","Milk","Sugar","Salt"],
+ ["Make dough.","Layer with butter.","Fold repeatedly.","Shape crescents.","Proof.","Bake until golden."]],
+
+["Fish and Chips","International","Non-Veg","French","🐟",4.8,45,"Medium",
+ "Crispy battered fish with fries.",
+ ["Fish fillets","Flour","Potatoes","Baking powder","Oil"],
+ ["Cut potatoes.","Prepare batter.","Coat fish.","Fry fish.","Fry potatoes.","Season and serve."]],
+
+["Chicken Burger","International","Non-Veg","American","🍔",4.8,35,"Easy",
+ "Crispy chicken burger with fresh toppings.",
+ ["Chicken","Burger buns","Lettuce","Tomato","Cheese","Breadcrumbs"],
+ ["Season chicken.","Coat in crumbs.","Cook until done.","Toast bun.","Assemble burger."]],
+
+["Mac and Cheese","International","Veg","American","🧀",4.9,35,"Easy",
+ "Creamy baked macaroni and cheese.",
+ ["Macaroni","Cheddar","Milk","Butter","Flour"],
+ ["Cook pasta.","Make cheese sauce.","Combine.","Top with cheese.","Bake until golden."]]
+
+];
+
+
+/*
+ Some recipes contain an older compact field mismatch.
+ This normalization makes every recipe safe.
+*/
+
+const DB = recipes.map((r,i)=>({
+
+ id:i,
+ name:r[0],
+ category:r[1],
+ diet:r[2],
+ cuisine:r[3],
+ emoji:r[4],
+ rating:typeof r[5]==="number" ? r[5] : 4.8,
+ time:typeof r[6]==="number" ? r[6] : 45,
+ difficulty:r[7] || "Medium",
+ description:r[8],
+ ingredients:r[9],
+ steps:r[10],
+
+ tags:[
+  r[1],
+  r[2],
+  r[3]
+ ]
+
+}));
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let currentDiet="Both";
+let currentCategory="All";
+let currentSubCategory="";
+let currentRecipe=null;
+let currentCookingStep=0;
+
+let favorites=
+ JSON.parse(localStorage.getItem("ark_favorites") || "[]");
+
+let shopping=
+ JSON.parse(localStorage.getItem("ark_shopping") || "[]");
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+function go(id){
+
+ document.getElementById(id)
+  ?.scrollIntoView({behavior:"smooth"});
+
+}
+
+
+/* =========================================================
+   FILTERING
+========================================================= */
+
+function dietFilter(diet,button){
+
+ currentDiet=diet;
+
+ document
+  .querySelectorAll("[data-diet]")
+  .forEach(b=>b.classList.remove("active"));
+
+ button?.classList.add("active");
+
+ renderRecipes();
+
+}
+
+
+function category(cat){
+
+ currentCategory=cat;
+ currentSubCategory="";
+
+ document.getElementById("recipeHeading").textContent=
+  "🍴 "+cat+" Recipes";
+
+ go("explore");
+
+ renderRecipes();
+
+}
+
+
+function subCategory(sub){
+
+ currentSubCategory=sub;
+
+ renderRecipes();
+
+ document
+  .querySelectorAll(".sub-pill")
+  .forEach(x=>x.classList.remove("active"));
+
+ event?.target?.classList.add("active");
+
+}
+
+
+function toggleAdvanced(){
+
+ document
+  .getElementById("advanced")
+  .classList.toggle("show");
+
+}
+
+
+function clearFilters(){
+
+ currentDiet="Both";
+ currentCategory="All";
+ currentSubCategory="";
+
+ document.getElementById("search").value="";
+
+ document.getElementById("cuisineFilter").value="All";
+ document.getElementById("difficultyFilter").value="All";
+ document.getElementById("timeFilter").value="All";
+ document.getElementById("sortFilter").value="popular";
+
+ document
+  .querySelectorAll("[data-diet]")
+  .forEach(b=>b.classList.remove("active"));
+
+ document
+  .querySelector("[data-diet='Both']")
+  ?.classList.add("active");
+
+ document.getElementById("recipeHeading").textContent=
+  "🍴 All Recipes";
+
+ renderRecipes();
+
+ toast("🔄 Filters cleared!");
+
+}
+
+
+/* =========================================================
+   SEARCH + RENDER
+========================================================= */
+
+function renderRecipes(){
+
+ const search=
+  document.getElementById("search")
+  .value
+  .toLowerCase()
+  .trim();
+
+ const cuisine=
+  document.getElementById("cuisineFilter").value;
+
+ const difficulty=
+  document.getElementById("difficultyFilter").value;
+
+ const time=
+  document.getElementById("timeFilter").value;
+
+ const sort=
+  document.getElementById("sortFilter").value;
+
+
+ let result=DB.filter(r=>{
+
+  const text=
+   (
+    r.name+" "+
+    r.description+" "+
+    r.category+" "+
+    r.cuisine+" "+
+    r.ingredients.join(" ")
+   ).toLowerCase();
+
+  const searchOK=!search || text.includes(search);
+
+  const dietOK=
+   currentDiet==="Both" ||
+   r.diet===currentDiet;
+
+  const categoryOK=
+   currentCategory==="All" ||
+   r.category===currentCategory;
+
+  const cuisineOK=
+   cuisine==="All" ||
+   r.cuisine===cuisine;
+
+  const difficultyOK=
+   difficulty==="All" ||
+   r.difficulty===difficulty;
+
+  const timeOK=
+   time==="All" ||
+   r.time<=Number(time);
+
+  const subOK=
+   !currentSubCategory ||
+   text.includes(currentSubCategory.toLowerCase());
+
+  return searchOK &&
+   dietOK &&
+   categoryOK &&
+   cuisineOK &&
+   difficultyOK &&
+   timeOK &&
+   subOK;
+
+ });
+
+
+ if(sort==="rating")
+  result.sort((a,b)=>b.rating-a.rating);
+
+ if(sort==="name")
+  result.sort((a,b)=>a.name.localeCompare(b.name));
+
+ if(sort==="time")
+  result.sort((a,b)=>a.time-b.time);
+
+ const grid=document.getElementById("recipeGrid");
+
+ grid.innerHTML="";
+
+
+ if(!result.length){
+
+  grid.innerHTML=`
+   <div style="grid-column:1/-1;text-align:center;padding:60px">
+    <div style="font-size:65px">😢</div>
+    <h2>No recipe found</h2>
+    <p style="color:var(--muted)">
+     Try another search or clear the filters.
+    </p>
+   </div>
+  `;
+
+ }else{
+
+  result.forEach(r=>{
+   grid.innerHTML+=recipeCard(r);
+  });
+
+ }
+
+
+ document.getElementById("resultCount").textContent=
+  `👑 ${result.length} recipes found • Curated by KESHAV ❤️`;
+
+}
+
+
+function recipeCard(r){
+
+ const saved=favorites.includes(r.id);
+
+ return `
+
+ <article class="recipe-card">
+
+  <button
+   class="favorite ${saved?"saved":""}"
+   onclick="toggleFavorite(${r.id},event)">
+   ${saved?"❤️":"🤍"}
+  </button>
+
+  <div class="recipe-photo">
+   ${r.emoji}
+  </div>
+
+  <div class="recipe-body">
+
+   <div class="recipe-title">
+
+    <h3>${r.name}</h3>
+
+    <div class="rating">
+     ⭐ ${r.rating}
+    </div>
+
+   </div>
+
+
+   <div class="meta">
+    <span>⏱️ ${r.time} min</span>
+    <span>${difficultyIcon(r.difficulty)} ${r.difficulty}</span>
+    <span>🌎 ${r.cuisine}</span>
+   </div>
+
+
+   <div class="tags">
+
+    <span class="tag ${r.diet==="Non-Veg"?"nonveg":""}">
+     ${r.diet==="Veg"?"🥬 VEG":"🍗 NON-VEG"}
+    </span>
+
+    <span class="tag">
+     ${r.category}
+    </span>
+
+   </div>
+
+
+   <div class="card-actions">
+
+    <button class="view"
+     onclick="openRecipe(${r.id})">
+     👨‍🍳 View Recipe
+    </button>
+
+    <button class="add"
+     title="Add ingredients"
+     onclick="quickShop(${r.id},event)">
+     🛒
+    </button>
+
+   </div>
+
+  </div>
+
+ </article>
+
+ `;
+
+}
+
+
+function difficultyIcon(d){
+
+ if(d==="Easy") return "🟢";
+ if(d==="Hard") return "🔴";
+ return "🟡";
+
+}
+
+
+/* =========================================================
+   FAVORITES
+========================================================= */
+
+function toggleFavorite(id,e){
+
+ e?.stopPropagation();
+
+ if(favorites.includes(id)){
+
+  favorites=
+   favorites.filter(x=>x!==id);
+
+  toast("💔 Removed from favorites");
+
+ }else{
+
+  favorites.push(id);
+
+  toast("❤️ Added to Keshav's favorites!");
+
+ }
+
+ localStorage.setItem(
+  "ark_favorites",
+  JSON.stringify(favorites)
+ );
+
+ renderRecipes();
+
+}
+
+
+function showFavorites(){
+
+ currentCategory="All";
+ currentSubCategory="";
+
+ const list=DB.filter(r=>favorites.includes(r.id));
+
+ const grid=document.getElementById("recipeGrid");
+
+ go("explore");
+
+ document.getElementById("recipeHeading").textContent=
+  "❤️ Keshav's Favorite Recipes";
+
+ grid.innerHTML=
+  list.length
+  ? list.map(recipeCard).join("")
+  : `
+   <div style="grid-column:1/-1;text-align:center;padding:60px">
+    <div style="font-size:65px">🤍</div>
+    <h2>No favorites yet</h2>
+    <p style="color:var(--muted)">
+     Tap the heart on any recipe to save it.
+    </p>
+   </div>
+  `;
+
+}
+
+
+/* =========================================================
+   RECIPE MODAL
+========================================================= */
+
+function openRecipe(id){
+
+ currentRecipe=DB.find(r=>r.id===id);
+
+ if(!currentRecipe)return;
+
+ const r=currentRecipe;
+
+ document.getElementById("modalEmoji").textContent=r.emoji;
+
+ document.getElementById("modalTitle").textContent=r.name;
+
+ document.getElementById("modalDescription").textContent=
+  r.description;
+
+ document.getElementById("modalMeta").innerHTML=`
+
+  <span>⭐ ${r.rating}</span>
+  <span>⏱️ ${r.time} minutes</span>
+  <span>${difficultyIcon(r.difficulty)} ${r.difficulty}</span>
+  <span>🌎 ${r.cuisine}</span>
+  <span>${r.diet==="Veg"?"🥬 Vegetarian":"🍗 Non-Veg"}</span>
+
+ `;
+
+
+ document.getElementById("modalIngredients").innerHTML=
+  r.ingredients.map((x,i)=>`
+   <li>
+    <label>
+     <input type="checkbox">
+     ${x}
+    </label>
+   </li>
+  `).join("");
+
+
+ document.getElementById("modalSteps").innerHTML=
+  r.steps.map(x=>`<li>${x}</li>`).join("");
+
+
+ document.getElementById("recipeModal")
+  .classList.add("open");
+
+}
+
+
+function openRecipeByName(name){
+
+ const r=DB.find(x=>x.name===name);
+
+ if(r)openRecipe(r.id);
+
+}
+
+
+function closeModal(){
+
+ document.getElementById("recipeModal")
+  .classList.remove("open");
+
+}
+
+
+/* =========================================================
+   COOKING MODE
+========================================================= */
+
+function startCooking(){
+
+ if(!currentRecipe)return;
+
+ currentCookingStep=0;
+
+ closeModal();
+
+ document.getElementById("cookTitle").textContent=
+  "🔥 "+currentRecipe.name+" • Keshav's Cooking Mode";
+
+ document.getElementById("cookEmoji").textContent=
+  currentRecipe.emoji;
+
+ document.getElementById("cookMode")
+  .classList.add("open");
+
+ updateCooking();
+
+}
+
+
+function updateCooking(){
+
+ const steps=currentRecipe.steps;
+
+ const step=steps[currentCookingStep];
+
+ document.getElementById("cookStepLabel").textContent=
+  "Step "+(currentCookingStep+1);
+
+ document.getElementById("cookStep").textContent=
+  step;
+
+ document.getElementById("cookHint").textContent=
+  currentRecipe.name+" • Made by KESHAV ❤️";
+
+ document.getElementById("cookProgress").style.width=
+  ((currentCookingStep+1)/steps.length*100)+"%";
+
+ document.getElementById("cookProgressText").textContent=
+  `${currentCookingStep+1} / ${steps.length}`;
+
+}
+
+
+function nextStep(){
+
+ if(currentCookingStep<
+    currentRecipe.steps.length-1){
+
+  currentCookingStep++;
+  updateCooking();
+
+ }else{
+
+  toast("🎉 Recipe complete! Great cooking, Keshav's Kitchen!");
+
+ }
+
+}
+
+
+function previousStep(){
+
+ if(currentCookingStep>0){
+
+  currentCookingStep--;
+  updateCooking();
+
+ }
+
+}
+
+
+function closeCooking(){
+
+ document.getElementById("cookMode")
+  .classList.remove("open");
+
+}
+
+
+/* =========================================================
+   SHOPPING LIST
+========================================================= */
+
+function quickShop(id,e){
+
+ e?.stopPropagation();
+
+ const r=DB.find(x=>x.id===id);
+
+ if(!r)return;
+
+ r.ingredients.forEach(item=>{
+
+  if(!shopping.some(x=>x.text===item)){
+   shopping.push({
+    text:item,
+    done:false
+   });
+  }
+
+ });
+
+ saveShopping();
+
+ toast("🛒 Ingredients added to shopping list!");
+
+}
+
+
+function addCurrentToShopping(){
+
+ if(!currentRecipe)return;
+
+ currentRecipe.ingredients.forEach(item=>{
+
+  if(!shopping.some(x=>x.text===item)){
+   shopping.push({
+    text:item,
+    done:false
+   });
+  }
+
+ });
+
+ saveShopping();
+
+ toast("🛒 Ingredients added!");
+
+}
+
+
+function saveShopping(){
+
+ localStorage.setItem(
+  "ark_shopping",
+  JSON.stringify(shopping)
+ );
+
+ renderShopping();
+
+}
+
+
+function renderShopping(){
+
+ const box=document.getElementById("shoppingList");
+
+ if(!shopping.length){
+
+  box.innerHTML=`
+   <div style="grid-column:1/-1;text-align:center">
+    🛒 Your shopping list is empty.
+   </div>
+  `;
+
+  return;
+
+ }
+
+ box.innerHTML=shopping.map((x,i)=>`
+
+  <label class="shop-item ${x.done?"done":""}">
+
+   <input type="checkbox"
+    ${x.done?"checked":""}
+    onchange="toggleShop(${i})">
+
+   <span>${x.text}</span>
+
+  </label>
+
+ `).join("");
+
+}
+
+
+function toggleShop(i){
+
+ shopping[i].done=!shopping[i].done;
+
+ saveShopping();
+
+}
+
+
+function clearShopping(){
+
+ shopping=[];
+
+ saveShopping();
+
+ toast("🧹 Shopping list cleared!");
+
+}
+
+
+function showShopping(){
+
+ const sec=document.getElementById("shoppingSection");
+
+ sec.style.display="block";
+
+ renderShopping();
+
+ go("shoppingSection");
+
+}
+
+
+/* =========================================================
+   INDIA FOOD MAP
+========================================================= */
+
+function stateFood(state,food){
+
+ document.getElementById("stateName").textContent=
+  state+" 🇮🇳";
+
+ document.getElementById("stateFood").textContent=
+  food;
+
+ document.getElementById("stateDescription").textContent=
+  `${state} is famous for dishes and food traditions like ${food}. Explore the recipe library to discover more Indian cooking.`;
+
+ toast("🇮🇳 "+state+" • "+food);
+
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+function themeChange(theme){
+
+ document.body.className="";
+
+ if(theme!=="normal")
+  document.body.classList.add(theme);
+
+ localStorage.setItem("ark_theme",theme);
+
+ toast("🎨 Theme changed!");
+
+}
+
+
+function volumeChange(v){
+
+ document.getElementById("volumeText").textContent=
+  v+"%";
+
+ localStorage.setItem("ark_volume",v);
+
+}
+
+
+function languageChange(lang){
+
+ const messages={
+  English:"🇬🇧 English selected!",
+  Hindi:"🇮🇳 हिंदी चुनी गई!",
+  Spanish:"🇪🇸 ¡Español seleccionado!",
+  French:"🇫🇷 Français sélectionné!",
+  German:"🇩🇪 Deutsch ausgewählt!",
+  Japanese:"🇯🇵 日本語を選択しました!",
+  Arabic:"🇸🇦 تم اختيار العربية!"
+ };
+
+ toast(messages[lang]||messages.English);
+
+}
+
+
+function dietFromSettings(diet){
+
+ currentDiet=diet;
+
+ go("explore");
+
+ renderRecipes();
+
+ toast(
+  diet==="Both"
+  ?"🥬🍗 Showing both Veg and Non-Veg"
+  :diet==="Veg"
+  ?"🥬 Vegetarian mode ON"
+  :"🍗 Non-Veg mode ON"
+ );
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer;
+
+function toast(message){
+
+ const t=document.getElementById("toast");
+
+ t.textContent=message;
+
+ t.classList.add("show");
+
+ clearTimeout(toastTimer);
+
+ toastTimer=setTimeout(()=>{
+  t.classList.remove("show");
+ },2500);
+
+}
+
+
+/* =========================================================
+   KEYBOARD SHORTCUT
+========================================================= */
+
+document.addEventListener("keydown",e=>{
+
+ if(e.key==="/"){
+
+  e.preventDefault();
+
+  document.getElementById("search").focus();
+
+ }
+
+ if(e.key==="Escape"){
+
+  closeModal();
+  closeCooking();
+
+ }
+
+});
+
+
+/* =========================================================
+   INITIAL LOAD
+========================================================= */
+
+function loadSettings(){
+
+ const theme=
+  localStorage.getItem("ark_theme");
+
+ if(theme){
+
+  document.body.className=
+   theme==="normal"?"":theme;
+
+ }
+
+ const volume=
+  localStorage.getItem("ark_volume");
+
+ if(volume){
+
+  document.getElementById("volume").value=volume;
+
+  document.getElementById("volumeText").textContent=
+   volume+"%";
+
+ }
+
+ renderShopping();
+
+ renderRecipes();
+
+}
+
+loadSettings();
+
+
+/* =========================================================
+   CLICK OUTSIDE MODAL
+========================================================= */
+
+document
+ .getElementById("recipeModal")
+ .addEventListener("click",function(e){
+
+  if(e.target===this)
+   closeModal();
+
+ });
+
+
+</script>
+
+</body>
+</html>
+```
